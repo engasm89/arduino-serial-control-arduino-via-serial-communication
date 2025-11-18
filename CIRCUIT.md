@@ -8,15 +8,18 @@
 
 - Onboard LED at `GPIO2`.
 - USB to PC for UART.
+- Optional external LED via resistor to another GPIO.
 
 ## Diagram (ASCII)
 
 ```
  ESP32 ---- USB ---- PC (Serial Terminal)
-  GPIO2 -> LED
+ GPIO2 -> LED
+ GPIO4 ->[220Ω]-> LED -> GND
 ```
 
-## Purchase With Discount
+## Notes
 
-Build serial control skills with a discounted price — enroll via the link above.
+- Baud rate typically 115200; ensure terminal settings match.
+- Avoid powering external loads directly from GPIO; use drivers.
 
